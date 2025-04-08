@@ -6,3 +6,6 @@
 # 지역적 정보로서 log 를 관리
 /log
 
+# 지역적 정보로서 camera_data 를 관리
+/camera/camera_data
+

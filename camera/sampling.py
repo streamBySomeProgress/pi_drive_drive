@@ -13,7 +13,7 @@ logging.basicConfig(filename='camera.log', level=logging.INFO,
 picam = Picamera2()
 camera_running = False
 thread = None
-output_dir = "camera_data"
+output_dir = "./camera/camera_data"
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
