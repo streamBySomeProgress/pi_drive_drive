@@ -3,8 +3,14 @@ import threading
 import logging
 from camera.sampling import camera_loop, camera_loop_abort
 
+# 로깅 설정
+logging.basicConfig(filename='./log/main.log', level=logging.INFO,
+                    format='%(asctime)s - %(message)s')
+
+# 전역 변수
 app = FastAPI()
 camera_running = False
+thread = None
 
 @app.get("/start")
 async def start_camera():

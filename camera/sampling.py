@@ -6,7 +6,7 @@ import logging
 import os
 
 # 로깅 설정
-logging.basicConfig(filename='camera.log', level=logging.INFO,
+logging.basicConfig(filename='./log/camera.log', level=logging.INFO,
                     format='%(asctime)s - %(message)s')
 
 # 전역 변수
