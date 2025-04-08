@@ -1,14 +1,9 @@
-from flask import Flask, Response
 from picamera2 import Picamera2
 import cv2
-import torch
 from torchvision import transforms
-import threading
 import time
 import logging
 import os
-
-app = Flask(__name__)
 
 # 로깅 설정
 logging.basicConfig(filename='camera.log', level=logging.INFO,
