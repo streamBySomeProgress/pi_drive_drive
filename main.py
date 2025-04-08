@@ -12,7 +12,7 @@ async def start_camera():
     global camera_running, thread
     if not camera_running:
         camera_running = True
-        thread = threading.Thread(target=camera_loop)
+        thread = threading.Thread(target=camera_loop(camera_running))
         thread.start()
         logging.info("Camera started via HTTP")
         return {"message": "Camera started"}

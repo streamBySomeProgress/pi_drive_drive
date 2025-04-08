@@ -18,9 +18,8 @@ if not os.path.exists(output_dir):
 # PyTorch 변환 설정
 transform = transforms.ToTensor()
 
-def camera_loop():
+def camera_loop(camera_running):
     """카메라 데이터를 처리하는 루프"""
-    global camera_running # 해당 전역 변수를 false 로 변환함으로서 loop 중단 가능
     picam.configure(picam.create_preview_configuration(main={"size": (640, 480)}))
     picam.start()
 
