@@ -1,0 +1,12 @@
+# venv 이하 모든 파일을 무시
+/venv
+# 패키지 정보가 들어있는 파일은 관리(일괄설치: pip install -r requirements.txt)
+!/venv/requirements.txt
+
+# 지역적 정보로서 log 를 관리
+/log
+
+# camera 디렉터리 이하의 특정 시점에만 필요한 데이터
+/camera/camera_data
+/camera/__pycache__
+
