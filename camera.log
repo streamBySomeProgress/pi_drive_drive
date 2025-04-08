@@ -1,0 +1,288 @@
+2025-04-08 14:31:31,059 - Initialization successful.
+2025-04-08 14:31:31,059 - Camera now open.
+2025-04-08 14:31:31,260 - Camera closed successfully.
+2025-04-08 14:39:14,640 - Initialization successful.
+2025-04-08 14:39:14,641 - Camera now open.
+2025-04-08 14:39:14,842 - Camera closed successfully.
+2025-04-08 14:40:46,066 - Initialization successful.
+2025-04-08 14:40:46,066 - Camera now open.
+2025-04-08 14:40:46,068 - Camera configuration has been adjusted!
+2025-04-08 14:40:46,069 - Configuration successful!
+2025-04-08 14:40:46,150 - Camera started
+2025-04-08 14:40:46,153 - Camera stopped
+2025-04-08 14:40:46,154 - Camera stopped
+2025-04-08 14:40:46,555 - Camera closed successfully.
+2025-04-08 14:47:02,285 - Initialization successful.
+2025-04-08 14:47:02,285 - Camera now open.
+2025-04-08 14:47:02,287 - Camera configuration has been adjusted!
+2025-04-08 14:47:02,288 - Configuration successful!
+2025-04-08 14:47:02,370 - Camera started
+2025-04-08 14:47:02,374 - Camera stopped
+2025-04-08 14:47:02,374 - Camera stopped
+2025-04-08 14:47:02,775 - Camera closed successfully.
+2025-04-08 14:48:13,277 - Initialization successful.
+2025-04-08 14:48:13,277 - Camera now open.
+2025-04-08 14:48:13,279 - Camera configuration has been adjusted!
+2025-04-08 14:48:13,280 - Configuration successful!
+2025-04-08 14:48:13,362 - Camera started
+2025-04-08 14:48:13,365 - Camera stopped
+2025-04-08 14:48:13,366 - Camera stopped
+2025-04-08 14:48:13,767 - Camera closed successfully.
+2025-04-08 14:50:06,672 - Initialization successful.
+2025-04-08 14:50:06,672 - Camera now open.
+2025-04-08 14:50:06,674 - transforms.ToTensor()
+2025-04-08 14:50:06,874 - Camera closed successfully.
+2025-04-08 14:51:12,462 - Initialization successful.
+2025-04-08 14:51:12,462 - Camera now open.
+2025-04-08 14:51:12,663 - Camera closed successfully.
+2025-04-08 14:53:23,447 - Initialization successful.
+2025-04-08 14:53:23,447 - Camera now open.
+2025-04-08 14:53:23,491 - FastAPI server starting...
+2025-04-08 14:53:57,884 - Camera closed successfully.
+2025-04-08 14:55:00,829 - Initialization successful.
+2025-04-08 14:55:00,830 - Camera now open.
+2025-04-08 14:55:00,851 - FastAPI server starting...
+2025-04-08 15:23:38,421 - Camera closed successfully.
+2025-04-08 15:23:54,538 - Initialization successful.
+2025-04-08 15:23:54,538 - Camera now open.
+2025-04-08 15:23:54,561 - FastAPI server starting...
+2025-04-08 15:32:08,400 - Camera configuration has been adjusted!
+2025-04-08 15:32:08,400 - Camera started via HTTP
+2025-04-08 15:32:08,401 - Configuration successful!
+2025-04-08 15:32:08,482 - Camera started
+2025-04-08 15:32:08,868 - Frame 0: Average brightness = 0.663
+2025-04-08 15:32:09,000 - Frame 1: Average brightness = 0.674
+2025-04-08 15:32:09,113 - Frame 2: Average brightness = 0.674
+2025-04-08 15:32:09,225 - Frame 3: Average brightness = 0.673
+2025-04-08 15:32:09,336 - Frame 4: Average brightness = 0.672
+2025-04-08 15:32:09,446 - Frame 5: Average brightness = 0.673
+2025-04-08 15:32:09,556 - Frame 6: Average brightness = 0.674
+2025-04-08 15:32:09,666 - Frame 7: Average brightness = 0.674
+2025-04-08 15:32:09,776 - Frame 8: Average brightness = 0.674
+2025-04-08 15:32:09,886 - Frame 9: Average brightness = 0.673
+2025-04-08 15:32:09,997 - Frame 10: Average brightness = 0.673
+2025-04-08 15:32:10,109 - Frame 11: Average brightness = 0.672
+2025-04-08 15:32:10,219 - Frame 12: Average brightness = 0.672
+2025-04-08 15:32:10,330 - Frame 13: Average brightness = 0.672
+2025-04-08 15:32:10,440 - Frame 14: Average brightness = 0.673
+2025-04-08 15:32:10,550 - Frame 15: Average brightness = 0.673
+2025-04-08 15:32:10,661 - Frame 16: Average brightness = 0.673
+2025-04-08 15:32:10,772 - Frame 17: Average brightness = 0.674
+2025-04-08 15:32:10,882 - Frame 18: Average brightness = 0.674
+2025-04-08 15:32:10,992 - Frame 19: Average brightness = 0.674
+2025-04-08 15:32:11,103 - Frame 20: Average brightness = 0.675
+2025-04-08 15:32:11,213 - Frame 21: Average brightness = 0.676
+2025-04-08 15:32:11,323 - Frame 22: Average brightness = 0.677
+2025-04-08 15:32:11,433 - Frame 23: Average brightness = 0.678
+2025-04-08 15:32:11,543 - Frame 24: Average brightness = 0.678
+2025-04-08 15:32:11,653 - Frame 25: Average brightness = 0.678
+2025-04-08 15:32:11,763 - Frame 26: Average brightness = 0.679
+2025-04-08 15:32:11,874 - Frame 27: Average brightness = 0.680
+2025-04-08 15:32:11,986 - Frame 28: Average brightness = 0.681
+2025-04-08 15:32:12,096 - Frame 29: Average brightness = 0.683
+2025-04-08 15:32:12,207 - Frame 30: Average brightness = 0.683
+2025-04-08 15:32:12,320 - Frame 31: Average brightness = 0.684
+2025-04-08 15:32:12,432 - Frame 32: Average brightness = 0.681
+2025-04-08 15:32:12,542 - Frame 33: Average brightness = 0.682
+2025-04-08 15:32:12,652 - Frame 34: Average brightness = 0.682
+2025-04-08 15:32:12,762 - Frame 35: Average brightness = 0.682
+2025-04-08 15:32:12,872 - Frame 36: Average brightness = 0.683
+2025-04-08 15:32:12,983 - Frame 37: Average brightness = 0.683
+2025-04-08 15:32:13,092 - Frame 38: Average brightness = 0.683
+2025-04-08 15:32:13,203 - Frame 39: Average brightness = 0.683
+2025-04-08 15:32:13,313 - Frame 40: Average brightness = 0.683
+2025-04-08 15:32:13,423 - Frame 41: Average brightness = 0.683
+2025-04-08 15:32:13,533 - Frame 42: Average brightness = 0.683
+2025-04-08 15:32:13,642 - Frame 43: Average brightness = 0.683
+2025-04-08 15:32:13,752 - Frame 44: Average brightness = 0.683
+2025-04-08 15:32:13,862 - Frame 45: Average brightness = 0.683
+2025-04-08 15:32:13,972 - Frame 46: Average brightness = 0.683
+2025-04-08 15:32:14,082 - Frame 47: Average brightness = 0.683
+2025-04-08 15:32:14,192 - Frame 48: Average brightness = 0.683
+2025-04-08 15:32:14,302 - Frame 49: Average brightness = 0.683
+2025-04-08 15:32:14,412 - Frame 50: Average brightness = 0.682
+2025-04-08 15:32:14,522 - Frame 51: Average brightness = 0.682
+2025-04-08 15:32:14,632 - Frame 52: Average brightness = 0.682
+2025-04-08 15:32:14,742 - Frame 53: Average brightness = 0.681
+2025-04-08 15:32:14,852 - Frame 54: Average brightness = 0.679
+2025-04-08 15:32:14,962 - Frame 55: Average brightness = 0.675
+2025-04-08 15:32:15,072 - Frame 56: Average brightness = 0.673
+2025-04-08 15:32:15,182 - Frame 57: Average brightness = 0.673
+2025-04-08 15:32:15,292 - Frame 58: Average brightness = 0.673
+2025-04-08 15:32:15,401 - Frame 59: Average brightness = 0.673
+2025-04-08 15:32:15,511 - Frame 60: Average brightness = 0.672
+2025-04-08 15:32:15,621 - Frame 61: Average brightness = 0.672
+2025-04-08 15:32:15,731 - Frame 62: Average brightness = 0.671
+2025-04-08 15:32:15,841 - Frame 63: Average brightness = 0.671
+2025-04-08 15:32:15,951 - Frame 64: Average brightness = 0.671
+2025-04-08 15:32:16,061 - Frame 65: Average brightness = 0.671
+2025-04-08 15:32:16,173 - Frame 66: Average brightness = 0.671
+2025-04-08 15:32:16,283 - Frame 67: Average brightness = 0.669
+2025-04-08 15:32:16,393 - Frame 68: Average brightness = 0.669
+2025-04-08 15:32:16,503 - Frame 69: Average brightness = 0.669
+2025-04-08 15:32:16,613 - Frame 70: Average brightness = 0.670
+2025-04-08 15:32:16,724 - Frame 71: Average brightness = 0.670
+2025-04-08 15:32:16,834 - Frame 72: Average brightness = 0.671
+2025-04-08 15:32:16,945 - Frame 73: Average brightness = 0.671
+2025-04-08 15:32:17,055 - Frame 74: Average brightness = 0.671
+2025-04-08 15:32:17,166 - Frame 75: Average brightness = 0.672
+2025-04-08 15:32:17,277 - Frame 76: Average brightness = 0.672
+2025-04-08 15:32:17,387 - Frame 77: Average brightness = 0.672
+2025-04-08 15:32:17,497 - Frame 78: Average brightness = 0.672
+2025-04-08 15:32:17,607 - Frame 79: Average brightness = 0.672
+2025-04-08 15:32:17,717 - Frame 80: Average brightness = 0.673
+2025-04-08 15:32:17,827 - Frame 81: Average brightness = 0.673
+2025-04-08 15:32:17,937 - Frame 82: Average brightness = 0.674
+2025-04-08 15:32:18,048 - Frame 83: Average brightness = 0.675
+2025-04-08 15:32:18,158 - Frame 84: Average brightness = 0.676
+2025-04-08 15:32:18,270 - Frame 85: Average brightness = 0.676
+2025-04-08 15:32:18,381 - Frame 86: Average brightness = 0.676
+2025-04-08 15:32:18,494 - Frame 87: Average brightness = 0.677
+2025-04-08 15:32:18,606 - Frame 88: Average brightness = 0.677
+2025-04-08 15:32:18,723 - Frame 89: Average brightness = 0.678
+2025-04-08 15:32:18,835 - Frame 90: Average brightness = 0.678
+2025-04-08 15:32:18,946 - Frame 91: Average brightness = 0.678
+2025-04-08 15:32:19,059 - Frame 92: Average brightness = 0.679
+2025-04-08 15:32:19,171 - Frame 93: Average brightness = 0.679
+2025-04-08 15:32:19,281 - Frame 94: Average brightness = 0.679
+2025-04-08 15:32:19,391 - Frame 95: Average brightness = 0.680
+2025-04-08 15:32:19,501 - Frame 96: Average brightness = 0.680
+2025-04-08 15:32:19,611 - Frame 97: Average brightness = 0.680
+2025-04-08 15:32:19,720 - Frame 98: Average brightness = 0.680
+2025-04-08 15:32:19,830 - Frame 99: Average brightness = 0.681
+2025-04-08 15:32:19,940 - Frame 100: Average brightness = 0.681
+2025-04-08 15:32:20,050 - Frame 101: Average brightness = 0.681
+2025-04-08 15:32:20,160 - Frame 102: Average brightness = 0.681
+2025-04-08 15:32:20,270 - Frame 103: Average brightness = 0.681
+2025-04-08 15:32:20,380 - Frame 104: Average brightness = 0.681
+2025-04-08 15:32:20,490 - Frame 105: Average brightness = 0.681
+2025-04-08 15:32:20,599 - Frame 106: Average brightness = 0.681
+2025-04-08 15:32:20,709 - Frame 107: Average brightness = 0.681
+2025-04-08 15:32:20,819 - Frame 108: Average brightness = 0.681
+2025-04-08 15:32:20,934 - Frame 109: Average brightness = 0.681
+2025-04-08 15:32:21,046 - Frame 110: Average brightness = 0.682
+2025-04-08 15:32:21,158 - Frame 111: Average brightness = 0.682
+2025-04-08 15:32:21,269 - Frame 112: Average brightness = 0.679
+2025-04-08 15:32:21,379 - Frame 113: Average brightness = 0.679
+2025-04-08 15:32:21,489 - Frame 114: Average brightness = 0.680
+2025-04-08 15:32:21,599 - Frame 115: Average brightness = 0.680
+2025-04-08 15:32:21,710 - Frame 116: Average brightness = 0.680
+2025-04-08 15:32:21,820 - Frame 117: Average brightness = 0.680
+2025-04-08 15:32:21,930 - Frame 118: Average brightness = 0.680
+2025-04-08 15:32:22,040 - Frame 119: Average brightness = 0.680
+2025-04-08 15:32:22,150 - Frame 120: Average brightness = 0.680
+2025-04-08 15:32:22,259 - Frame 121: Average brightness = 0.680
+2025-04-08 15:32:22,369 - Frame 122: Average brightness = 0.680
+2025-04-08 15:32:22,478 - Frame 123: Average brightness = 0.681
+2025-04-08 15:32:22,589 - Frame 124: Average brightness = 0.681
+2025-04-08 15:32:22,699 - Frame 125: Average brightness = 0.681
+2025-04-08 15:32:22,809 - Frame 126: Average brightness = 0.681
+2025-04-08 15:32:22,919 - Frame 127: Average brightness = 0.681
+2025-04-08 15:32:23,030 - Frame 128: Average brightness = 0.681
+2025-04-08 15:32:23,142 - Frame 129: Average brightness = 0.682
+2025-04-08 15:32:23,255 - Frame 130: Average brightness = 0.682
+2025-04-08 15:32:23,369 - Frame 131: Average brightness = 0.682
+2025-04-08 15:32:23,482 - Frame 132: Average brightness = 0.682
+2025-04-08 15:32:23,593 - Frame 133: Average brightness = 0.681
+2025-04-08 15:32:23,704 - Frame 134: Average brightness = 0.679
+2025-04-08 15:32:23,816 - Frame 135: Average brightness = 0.675
+2025-04-08 15:32:23,927 - Frame 136: Average brightness = 0.670
+2025-04-08 15:32:24,038 - Frame 137: Average brightness = 0.661
+2025-04-08 15:32:24,148 - Frame 138: Average brightness = 0.654
+2025-04-08 15:32:24,258 - Frame 139: Average brightness = 0.661
+2025-04-08 15:32:24,368 - Frame 140: Average brightness = 0.654
+2025-04-08 15:32:24,478 - Frame 141: Average brightness = 0.659
+2025-04-08 15:32:24,588 - Frame 142: Average brightness = 0.631
+2025-04-08 15:32:24,698 - Frame 143: Average brightness = 0.586
+2025-04-08 15:32:24,808 - Frame 144: Average brightness = 0.581
+2025-04-08 15:32:24,918 - Frame 145: Average brightness = 0.603
+2025-04-08 15:32:25,028 - Frame 146: Average brightness = 0.652
+2025-04-08 15:32:25,138 - Frame 147: Average brightness = 0.607
+2025-04-08 15:32:25,249 - Frame 148: Average brightness = 0.603
+2025-04-08 15:32:25,360 - Frame 149: Average brightness = 0.653
+2025-04-08 15:32:25,470 - Frame 150: Average brightness = 0.658
+2025-04-08 15:32:25,581 - Frame 151: Average brightness = 0.646
+2025-04-08 15:32:25,692 - Frame 152: Average brightness = 0.643
+2025-04-08 15:32:25,801 - Frame 153: Average brightness = 0.643
+2025-04-08 15:32:25,911 - Frame 154: Average brightness = 0.643
+2025-04-08 15:32:26,021 - Frame 155: Average brightness = 0.643
+2025-04-08 15:32:26,131 - Frame 156: Average brightness = 0.644
+2025-04-08 15:32:26,241 - Frame 157: Average brightness = 0.644
+2025-04-08 15:32:26,351 - Frame 158: Average brightness = 0.643
+2025-04-08 15:32:26,461 - Frame 159: Average brightness = 0.644
+2025-04-08 15:32:26,571 - Frame 160: Average brightness = 0.643
+2025-04-08 15:32:26,681 - Frame 161: Average brightness = 0.644
+2025-04-08 15:32:26,790 - Frame 162: Average brightness = 0.641
+2025-04-08 15:32:26,900 - Frame 163: Average brightness = 0.642
+2025-04-08 15:32:27,010 - Frame 164: Average brightness = 0.643
+2025-04-08 15:32:27,120 - Frame 165: Average brightness = 0.643
+2025-04-08 15:32:27,230 - Frame 166: Average brightness = 0.643
+2025-04-08 15:32:27,341 - Frame 167: Average brightness = 0.643
+2025-04-08 15:32:27,451 - Frame 168: Average brightness = 0.643
+2025-04-08 15:32:27,561 - Frame 169: Average brightness = 0.643
+2025-04-08 15:32:27,671 - Frame 170: Average brightness = 0.643
+2025-04-08 15:32:27,781 - Frame 171: Average brightness = 0.643
+2025-04-08 15:32:27,890 - Frame 172: Average brightness = 0.643
+2025-04-08 15:32:28,000 - Frame 173: Average brightness = 0.644
+2025-04-08 15:32:28,110 - Frame 174: Average brightness = 0.644
+2025-04-08 15:32:28,220 - Frame 175: Average brightness = 0.644
+2025-04-08 15:32:28,330 - Frame 176: Average brightness = 0.644
+2025-04-08 15:32:28,440 - Frame 177: Average brightness = 0.644
+2025-04-08 15:32:28,550 - Frame 178: Average brightness = 0.644
+2025-04-08 15:32:28,660 - Frame 179: Average brightness = 0.644
+2025-04-08 15:32:28,770 - Frame 180: Average brightness = 0.644
+2025-04-08 15:32:28,880 - Frame 181: Average brightness = 0.644
+2025-04-08 15:32:28,990 - Frame 182: Average brightness = 0.644
+2025-04-08 15:32:29,102 - Frame 183: Average brightness = 0.644
+2025-04-08 15:32:29,214 - Frame 184: Average brightness = 0.644
+2025-04-08 15:32:29,325 - Frame 185: Average brightness = 0.644
+2025-04-08 15:32:29,436 - Frame 186: Average brightness = 0.644
+2025-04-08 15:32:29,546 - Frame 187: Average brightness = 0.644
+2025-04-08 15:32:29,656 - Frame 188: Average brightness = 0.644
+2025-04-08 15:32:29,766 - Frame 189: Average brightness = 0.644
+2025-04-08 15:32:29,876 - Frame 190: Average brightness = 0.644
+2025-04-08 15:32:29,986 - Frame 191: Average brightness = 0.644
+2025-04-08 15:32:30,096 - Frame 192: Average brightness = 0.644
+2025-04-08 15:32:30,205 - Frame 193: Average brightness = 0.644
+2025-04-08 15:32:30,315 - Frame 194: Average brightness = 0.645
+2025-04-08 15:32:30,425 - Frame 195: Average brightness = 0.645
+2025-04-08 15:32:30,535 - Frame 196: Average brightness = 0.645
+2025-04-08 15:32:30,645 - Frame 197: Average brightness = 0.645
+2025-04-08 15:32:30,755 - Frame 198: Average brightness = 0.645
+2025-04-08 15:32:30,865 - Frame 199: Average brightness = 0.645
+2025-04-08 15:32:30,975 - Frame 200: Average brightness = 0.644
+2025-04-08 15:32:31,088 - Frame 201: Average brightness = 0.644
+2025-04-08 15:32:31,201 - Frame 202: Average brightness = 0.644
+2025-04-08 15:32:31,312 - Frame 203: Average brightness = 0.644
+2025-04-08 15:32:31,419 - Camera stopped
+2025-04-08 15:32:31,419 - Camera stopped
+2025-04-08 15:32:31,420 - Camera stopped via HTTP
+2025-04-08 15:37:09,787 - Initialization successful.
+2025-04-08 15:37:09,788 - Camera now open.
+2025-04-08 15:37:09,809 - FastAPI server starting...
+2025-04-08 15:37:19,895 - Camera configuration has been adjusted!
+2025-04-08 15:37:19,895 - Camera started via HTTP
+2025-04-08 15:37:19,896 - Configuration successful!
+2025-04-08 15:37:19,978 - Camera started
+2025-04-08 15:37:20,563 - Frame 0: Average brightness = 0.646
+2025-04-08 15:37:21,577 - Frame 1: Average brightness = 0.477
+2025-04-08 15:37:22,588 - Frame 2: Average brightness = 0.483
+2025-04-08 15:37:23,600 - Frame 3: Average brightness = 0.491
+2025-04-08 15:37:24,610 - Frame 4: Average brightness = 0.466
+2025-04-08 15:37:25,621 - Frame 5: Average brightness = 0.405
+2025-04-08 15:37:26,635 - Frame 6: Average brightness = 0.398
+2025-04-08 15:37:27,647 - Frame 7: Average brightness = 0.397
+2025-04-08 15:37:28,660 - Frame 8: Average brightness = 0.398
+2025-04-08 15:37:29,672 - Frame 9: Average brightness = 0.457
+2025-04-08 15:37:30,685 - Frame 10: Average brightness = 0.437
+2025-04-08 15:37:31,703 - Frame 11: Average brightness = 0.668
+2025-04-08 15:37:32,716 - Frame 12: Average brightness = 0.669
+2025-04-08 15:37:33,728 - Frame 13: Average brightness = 0.670
+2025-04-08 15:37:34,743 - Frame 14: Average brightness = 0.670
+2025-04-08 15:37:35,758 - Frame 15: Average brightness = 0.668
+2025-04-08 15:37:36,769 - Camera stopped
+2025-04-08 15:37:36,770 - Camera stopped
+2025-04-08 15:37:36,770 - Camera stopped via HTTP
+2025-04-08 17:27:49,477 - Initialization successful.
+2025-04-08 17:27:49,477 - Camera now open.
+2025-04-08 17:27:49,498 - FastAPI server starting...

@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 import threading
 import logging
+from camera.sampling import camera_loop
 
 app = FastAPI()
 
@@ -28,7 +29,17 @@ async def stop_camera():
         return {"message": "Camera stopped"}
     raise HTTPException(status_code=400, detail="Camera not running")
 
+@app.get("/")
+async def index():
+    """기본 페이지"""
+    return {"message": "Camera Control: Use /start or /stop"}
+
 @app.get("/status")
 async def status():
     """카메라 상태 확인"""
     return {"camera_running": camera_running}
+
+if __name__ == "__main__":
+    import uvicorn
+    logging.info("FastAPI server starting...")
+    uvicorn.run(app, host="0.0.0.0", port=5000)
