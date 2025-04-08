@@ -6,3 +6,9 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+
+# 가상환경 디렉터리 이하
+/venv
+
+# 패키지 목록은 상태관리
+!/requirements.tsx
