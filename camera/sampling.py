@@ -11,8 +11,6 @@ logging.basicConfig(filename='camera.log', level=logging.INFO,
 
 # 전역 변수
 picam = Picamera2()
-camera_running = False
-thread = None
 output_dir = "camera_data"
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)

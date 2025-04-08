@@ -4,6 +4,7 @@ import logging
 from camera.sampling import camera_loop
 
 app = FastAPI()
+camera_running = False
 
 @app.get("/start")
 async def start_camera():
