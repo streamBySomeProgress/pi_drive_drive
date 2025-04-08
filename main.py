@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 import threading
 import logging
-from camera.sampling import camera_loop
+from camera.sampling import camera_loop, camera_loop_abort
 
 app = FastAPI()
 camera_running = False
@@ -12,7 +12,7 @@ async def start_camera():
     global camera_running, thread
     if not camera_running:
         camera_running = True
-        thread = threading.Thread(target=camera_loop(camera_running))
+        thread = threading.Thread(target=camera_loop)
         thread.start()
         logging.info("Camera started via HTTP")
         return {"message": "Camera started"}
@@ -24,7 +24,8 @@ async def stop_camera():
     global camera_running, thread
     if camera_running:
         camera_running = False
-        thread.join()
+        camera_loop_abort() # 중단
+        thread.join() # camera_loop 를 실행하는 스레드가 중단될 때까지 대기
         thread = None
         logging.info("Camera stopped via HTTP")
         return {"message": "Camera stopped"}
