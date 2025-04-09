@@ -45,7 +45,7 @@ def camera_loop():
 
                 print(output)
 
-            logging.info(f"Frame {frame_count}: Prediction = {prediction}")
+            logging_info.info(f"Frame {frame_count}: Prediction = {prediction}")
             cv2.imwrite(f"{output_dir}/frame_{frame_count}.jpg", frame)
             frame_count += 1
             time.sleep(2)  # 처리 속도 조절 (2초마다 한번)
