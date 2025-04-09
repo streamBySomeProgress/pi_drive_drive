@@ -46,6 +46,6 @@ def camera_loop():
 def camera_loop_abort():
     """카메라 데이터 처리 동작 중단 영역"""
     global camera_running
-    camera_running = False
+    camera_running = False # 전역 변수를 변경함으로서 while 반복문 중단
     picam.stop()
     logging_info.info("Camera stopped")

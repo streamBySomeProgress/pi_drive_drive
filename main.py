@@ -32,7 +32,7 @@ async def stop_camera():
         camera_running = False
         camera_loop_abort() # 중단
         thread.join() # camera_loop 를 실행하는 스레드가 중단될 때까지 대기
-        thread = None
+        thread = None # 할당 해제
         logging_info.info("Camera stopped via HTTP")
         return {"message": "Camera stopped"}
     raise HTTPException(status_code=400, detail="Camera not running")
