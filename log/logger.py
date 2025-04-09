@@ -6,7 +6,7 @@ def setup_logger(name, log_file, level=logging.INFO):
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
     # 파일 핸들러 생성
-    file_handler = logging.FileHandler(log_file)
+    file_handler = logging.FileHandler('./' + log_file)
     file_handler.setFormatter(formatter)
 
     # 로거 생성

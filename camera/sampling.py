@@ -28,7 +28,6 @@ def camera_loop():
         picam.start()
         frame_count = 0
         # 중단을 희망할 시 camera_loop_abort 호출할 것
-        print('중단을 희망할 시 camera_loop_abort 호출할 것')
         while camera_running:
             frame = picam.capture_array()
             frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
