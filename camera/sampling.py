@@ -11,7 +11,7 @@ logging_info = setup_logger('sampling', 'log_sampling.txt', logging.INFO)
 
 # 전역 변수
 picam = Picamera2()
-output_dir = "./camera_data"
+output_dir = "./camera/camera_data"
 camera_running = False
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
