@@ -2,10 +2,10 @@ from fastapi import FastAPI, HTTPException
 import threading
 import logging
 from camera.sampling import camera_loop, camera_loop_abort
+from log.logger import setup_logger
 
 # 로깅 설정
-logging.basicConfig(filename='./log/main.log', level=logging.INFO,
-                    format='%(asctime)s - %(message)s')
+logging_info = setup_logger('main', 'log_main.txt', logging.INFO)
 
 # 전역 변수
 app = FastAPI()
@@ -17,11 +17,10 @@ async def start_camera():
     """카메라 시작 엔드포인트"""
     global camera_running, thread
     if not camera_running:
-        print('camera_running')
         camera_running = True
         thread = threading.Thread(target=camera_loop)
         thread.start()
-        logging.info("Camera started via HTTP")
+        logging_info.info("Camera started via HTTP")
         return {"message": "Camera started"}
     raise HTTPException(status_code=400, detail="Camera already running")
 
@@ -34,7 +33,7 @@ async def stop_camera():
         camera_loop_abort() # 중단
         thread.join() # camera_loop 를 실행하는 스레드가 중단될 때까지 대기
         thread = None
-        logging.info("Camera stopped via HTTP")
+        logging_info.info("Camera stopped via HTTP")
         return {"message": "Camera stopped"}
     raise HTTPException(status_code=400, detail="Camera not running")
 
@@ -50,5 +49,5 @@ async def status():
 
 if __name__ == "__main__":
     import uvicorn
-    logging.info("FastAPI server starting...")
+    logging_info.info("FastAPI server starting...")
     uvicorn.run(app, host="0.0.0.0", port=5000)
