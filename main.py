@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 import threading
 import logging
-from camera.sampling import camera_loop, camera_loop_abort
+from camera.sampling_eval import camera_loop, camera_loop_abort
 from log.logger import setup_logger
 
 # 로깅 설정
@@ -12,7 +12,7 @@ app = FastAPI()
 camera_running = False
 thread = None
 
-@app.get("/start")
+@app.get("/sampling/start")
 async def start_camera():
     """카메라 시작 엔드포인트"""
     global camera_running, thread
@@ -24,7 +24,7 @@ async def start_camera():
         return {"message": "Camera started"}
     raise HTTPException(status_code=400, detail="Camera already running")
 
-@app.get("/stop")
+@app.get("/sampling/stop")
 async def stop_camera():
     """카메라 종료 엔드포인트"""
     global camera_running, thread
@@ -40,9 +40,9 @@ async def stop_camera():
 @app.get("/")
 async def index():
     """기본 페이지"""
-    return {"message": "Camera Control: Use /start or /stop"}
+    return {"message": "Camera Control: Use /sampling/start or /sampling/stop"}
 
-@app.get("/status")
+@app.get("/sampling/status")
 async def status():
     """카메라 상태 확인"""
     return {"camera_running": camera_running}
