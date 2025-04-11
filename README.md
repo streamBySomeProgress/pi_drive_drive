@@ -8,3 +8,5 @@
 패키지 목록 최신화: pip freeze > requirements.txt
 
 목록에 있는 패키지 일괄 설치: pip install -r requirements.txt
+
+## 유의사항
