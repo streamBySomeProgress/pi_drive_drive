@@ -13,6 +13,7 @@ logging_info = setup_logger('sampling_eval', 'log_sampling_eval.txt', logging.IN
 # 전역 변수
 picam = Picamera2()
 camera_running = False
+model_path = 'model.pth'
 
 # PyTorch 변환 설정
 transform = transforms.ToTensor()
@@ -20,7 +21,7 @@ transform = transforms.ToTensor()
 # 모델 초기화 및 가중치 로드
 model = LineCNN()
 try:
-    model.load_state_dict(torch.load("model.pth"))
+    model.load_state_dict(torch.load(model_path))
     logging.info("Loaded trained model from model.pth")
 except FileNotFoundError:
     logging.info("No trained model found, using random weights")
@@ -40,19 +41,20 @@ def camera_loop():
         while camera_running:
             frame = picam.capture_array() # 프레임 캡처 (480x640x3), (해당 영역에서 촬영)
             frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB) # BGR -> RGB
-            frame_tensor = transform(frame_rgb).unsqueeze(0) # tensor 로 변환, 0번째 차원에 1차원 요소 추가 [3, 480, 640] -> [1, 3, 480, 640]
+            frame_tensor = transform(frame_rgb).unsqueeze(0) # tensor 로 변환, 0번째 차원에 1차원 요소 추가 [3, 480, 640] -> [1, 3, 480, 640]([배치 크기, rgb 채널 수, 해상도(480 * 640)])
 
             # CNN으로 예측
             with torch.no_grad():
-                output = model(frame_tensor)                  # [1, 4]
-                prediction = torch.argmax(output).item()      # 0: Left, 1: Center, 2: Right, 3: None
+                output = model(frame_tensor) # [1, 6] -> [batch_size, 출력 클래스 수]
+                # 예: tensor([[0.2, -1.5, 3.7, 0.1, 2.3, -0.9]])
+                prediction = torch.argmax(output).item() # 최종 예측은 가장 높은 점수의 인덱스를 선택(예: index 2(right))
 
             # 결과 로깅
             position_map = {
                 0: "Left",
                 1: "Center",
                 2: "Right",
-                3: "None",
+                3: "None", # 선 없음
                 4: "Left Curve",
                 5: "Right Curve"
             }
