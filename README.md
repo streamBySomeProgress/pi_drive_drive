@@ -11,5 +11,5 @@
 
 ## 유의사항
 
-1: 학습해야 할 클래스는 총 6개(Left, Center, Right, None, Left Curve, Right Curve)
-1:클래스(방향당 최소 20~30장의
+1. 학습해야 할 클래스는 총 6개(Left, Center, Right, None, Left Curve, Right Curve)
+2. 클래스당 최소 20~30장의 사진이 필요하며 각 클래스당 사진의 개수는 비슷하게 유지할 것)
