@@ -10,3 +10,6 @@
 목록에 있는 패키지 일괄 설치: pip install -r requirements.txt
 
 ## 유의사항
+
+1: 학습해야 할 클래스는 총 6개(Left, Center, Right, None, Left Curve, Right Curve)
+1:클래스(방향당 최소 20~30장의
