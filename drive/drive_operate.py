@@ -1,9 +1,7 @@
-import torch
 from torchvision import transforms
 import time
 import logging
 from log.logger import setup_logger
-from torchArea.cnn.lineCnn import LineCNN
 from global_path.global_path import model_path
 from torchArea.eval.eval_to_drive import eval_to_drive
 import threading
@@ -19,22 +17,12 @@ thread = None
 # PyTorch 변환 설정
 transform = transforms.ToTensor()
 
-# 모델 초기화 및 가중치 로드
-model = LineCNN()
-try:
-    model.load_state_dict(torch.load(global_model_path)) # 모델을 불러옴
-    logging.info("Loaded trained model from model.pth")
-except FileNotFoundError:
-    logging.info("No trained model found, using random weights")
-
-model.eval() # 평가 모드 (학습이 아닌 추론용)
-
 # 실질적 주행 동작을 수행하는 영역
 def drive_execute_operator():
     logging_info.info("driving is just started")
     while operating:
         # while 이하부터 주행 동작 영역
-        eval_to_drive()
+        eval_to_drive() # 모델을 기반으로 선의 방향을 반환하는 함수 todo 추후 실 주행 영역에 사용하기 위한 반환값 혹은 인자 생성 고려
         time.sleep(1)  # 처리 속도 조절 (1초마다 한번)
 
     # 반복문 종료 -> 주행 동작 중지됨(operating = False)
