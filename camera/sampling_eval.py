@@ -1,3 +1,5 @@
+## todo 삭제
+
 from picamera2 import Picamera2
 import cv2
 import torch
@@ -43,7 +45,7 @@ def camera_loop():
             frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB) # BGR -> RGB
             frame_tensor = transform(frame_rgb).unsqueeze(0) # tensor 로 변환, 0번째 차원에 1차원 요소 추가 [3, 480, 640] -> [1, 3, 480, 640]([배치 크기, rgb 채널 수, 해상도(480 * 640)])
 
-            # CNN으로 예측
+            # CNN으로 예측 todo 순수 카메라 동작 영역과 주행 관련 데이터 반환 영역 분리 고려
             with torch.no_grad():
                 output = model(frame_tensor) # [1, 6] -> [batch_size, 출력 클래스 수]
                 # 예: tensor([[0.2, -1.5, 3.7, 0.1, 2.3, -0.9]])

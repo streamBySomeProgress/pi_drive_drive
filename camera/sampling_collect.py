@@ -1,3 +1,5 @@
+## todo 삭제
+
 from picamera2 import Picamera2
 import cv2
 import logging
@@ -6,7 +8,7 @@ from torchvision import transforms
 import os
 import torch
 from torchArea.cnn.lineCnn import LineCNN
-from global_path.global_camera_path import camera_data_path
+from global_path.global_path import camera_data_path
 
 # 로깅 설정
 logging_info = setup_logger('sampling_collect', 'log_sampling_collect.txt', logging.INFO)
@@ -20,7 +22,7 @@ transform = transforms.ToTensor()
 # 모델 초기화
 model = LineCNN()
 
-output_dir = camera_data_path() # 해당 디렉토리 이하의 클래스별 디렉토리에 이미지가 저장됨
+output_dir = camera_data_path # 해당 디렉토리 이하의 클래스별 디렉토리에 이미지가 저장됨
 labels_file = os.path.join(output_dir, "labels.txt") # 라벨링 파일 경로(이미지를 클래스별로 라벨링)
 
 if not os.path.exists(output_dir):
@@ -54,7 +56,7 @@ def camera_capture(class_label: int = None):
     filepath = os.path.join(class_dir, filename)
 
     # 이미지 생성
-    cv2.imwrite(filepath, frame)
+    cv2.imwrite(filepath, frame) # todo 전송 로직으로 변환하기
 
     # labels.txt에 기록 (상대 경로 사용)
     rel_filepath = os.path.relpath(filepath, output_dir)

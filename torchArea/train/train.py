@@ -6,11 +6,10 @@ from PIL import Image
 from torchvision import transforms
 import os  # 누락된 os 임포트 추가
 from torchArea.cnn.lineCnn import LineCNN
-from global_path.global_camera_path import camera_data_path
-from global_path.global_model_path import model_path
+from global_path.global_path import camera_data_path, model_path
 
 
-global_model_path = model_path()
+global_model_path = model_path
 
 # 데이터셋 정의
 class LineDataset(Dataset):
@@ -35,7 +34,7 @@ class LineDataset(Dataset):
 
 
 # 데이터셋 및 로더
-dataset = LineDataset("labels.txt", camera_data_path())
+dataset = LineDataset("labels.txt", camera_data_path)
 loader = DataLoader(dataset, batch_size=4, shuffle=True)
 
 # 모델, 손실 함수, 최적화

@@ -4,50 +4,20 @@ import logging
 from camera.sampling_eval import camera_loop, camera_loop_abort
 from log.logger import setup_logger
 from camera.sampling_collect import camera_capture
-from torchArea.cnn.lineCnn import LineCNN
+from router.drive.drive_requestHandler import drive_handler
+
+app = FastAPI()
 
 # 로깅 설정
 logging_info = setup_logger('main', 'log_main.txt', logging.INFO)
 
 # 전역 변수
-app = FastAPI()
 camera_running = False
 thread = None
 
-# 모델 초기화
-model = LineCNN()
+app.include_router(drive_handler)
 
-@app.get("/")
-async def index():
-    """기본 페이지"""
-    return {"message": "Camera Control: Use /sampling/start or /sampling/stop"}
-
-# todo 추후 실 주행 테스트 할 시 카메라 영역은 main 영역에서 별도 영역으로 이동시켜야
-@app.get("/sampling/start")
-async def start_camera():
-    """카메라 시작 엔드포인트"""
-    global camera_running, thread
-    if not camera_running:
-        camera_running = True
-        thread = threading.Thread(target=camera_loop)
-        thread.start()
-        logging_info.info("Camera started via HTTP")
-        return {"message": "Camera started"}
-    raise HTTPException(status_code=400, detail="Camera already running")
-
-@app.get("/sampling/stop")
-async def stop_camera():
-    """카메라 종료 엔드포인트"""
-    global camera_running, thread
-    if camera_running:
-        camera_running = False
-        camera_loop_abort() # 중단
-        thread.join() # camera_loop 를 실행하는 스레드가 중단될 때까지 대기
-        thread = None # 할당 해제
-        logging_info.info("Camera stopped via HTTP")
-        return {"message": "Camera stopped"}
-    raise HTTPException(status_code=400, detail="Camera not running")
-
+# todo 하단 핸들러들은 적절히 이동시키거나 삭제
 @app.get("/sampling/status")
 async def status():
     """카메라 상태 확인"""
