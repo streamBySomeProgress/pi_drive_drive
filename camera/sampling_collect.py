@@ -28,11 +28,7 @@ if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
 # 학습용 이미지를 촬영하기 위한 영역 todo 동작 실행 도중에는 작동하지 않도록 호출 영역에서 조건문 작성
-# 인자
-    # class_label((방향)클래스의 라벨 값), output_dir(이미지 데이터가 저장되는 각각의 클래스 디렉터리들이 저장되는 상위 디렉터리 경로)
-# 응답값
-    # -2: label 인자가 클래스에 대응되지 않음(0 ~ 6 이외의 값인 경우)
-    # -1: label 인자 부재
+# 인자 -> class_label((방향)클래스의 라벨 값), output_dir(이미지 데이터가 저장되는 각각의 클래스 디렉터리들이 저장되는 상위 디렉터리 경로)
 def camera_capture(class_label: int = None):
     if class_label is None:
         raise Exception('class_label is None')  # 인자 부재
@@ -64,7 +60,7 @@ def camera_capture(class_label: int = None):
     rel_filepath = os.path.relpath(filepath, output_dir)
     with open(labels_file, "a") as f:
         # 이미지를 클래스별로 라벨링
-        f.write(f"{rel_filepath} {class_label}\n") # class_0/frame_0.jpg 0
+        f.write(f"{rel_filepath} {class_label}\n") # 예: class_0/frame_0.jpg 0
 
     # CNN 예측 todo capture 동작 내에서 예측 동작을 수행하고자 할 경우 일정 이상의 샘플 데이터가 축적된 뒤에 가능, 조건문 사용하여 학습된 데이터양에 따라 실행 여부가 결정되도록 할 것
     with torch.no_grad():
@@ -72,6 +68,6 @@ def camera_capture(class_label: int = None):
         prediction = torch.argmax(output).item()
 
     position_map = {0: "Left", 1: "Center", 2: "Right", 3: "None", 4: "Left Curve", 5: "Right Curve"}
-    logging.info(f"Captured frame saved as {filepath}: Prediction = {prediction} ({position_map[prediction]})")
+    logging.info(f"Captured frame saved as {filepath}: Prediction = {prediction} ({position_map[prediction]})") # 학습이 제대로 이루어졌을 경우 class_label 에 해당하는 prediction 값이 반환되어야
 
     return filepath, prediction

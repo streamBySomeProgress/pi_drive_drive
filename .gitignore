@@ -6,8 +6,4 @@
 # log 디렉터리 이하 txt 확장자 파일은 로그 파일로 간주하고 전부 무시
 /log/*.txt
 
-# camera 디렉터리 이하의 특정 시점에만 필요한 데이터
-/camera/camera_data
-/camera/__pycache__
-
 

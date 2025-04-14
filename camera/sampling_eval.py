@@ -21,7 +21,7 @@ transform = transforms.ToTensor()
 # 모델 초기화 및 가중치 로드
 model = LineCNN()
 try:
-    model.load_state_dict(torch.load(model_path))
+    model.load_state_dict(torch.load(model_path)) # 모델을 불러옴
     logging.info("Loaded trained model from model.pth")
 except FileNotFoundError:
     logging.info("No trained model found, using random weights")
