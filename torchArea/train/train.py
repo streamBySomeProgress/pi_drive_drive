@@ -1,3 +1,5 @@
+# todo 라벨 파일과 함께 training 프로젝트 영역으로 이동시킬 것
+
 import torch
 import torch.nn as nn
 import torch.optim as optim

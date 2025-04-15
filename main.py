@@ -1,9 +1,6 @@
-from fastapi import FastAPI, HTTPException
-import threading
+from fastapi import FastAPI
 import logging
-from camera.sampling_eval import camera_loop, camera_loop_abort
 from log.logger import setup_logger
-from camera.sampling_collect import camera_capture
 from router.drive.drive_requestHandler import drive_handler
 
 app = FastAPI()
@@ -11,14 +8,10 @@ app = FastAPI()
 # 로깅 설정
 logging_info = setup_logger('main', 'log_main.txt', logging.INFO)
 
-# 전역 변수
-camera_running = False
-thread = None
-
 app.include_router(drive_handler)
 
 # todo 하단 핸들러들은 적절히 이동시키거나 삭제
-@app.get("/sampling/status")
+'''@app.get("/sampling/status")
 async def status():
     """카메라 상태 확인"""
     return {"camera_running": camera_running}
@@ -39,4 +32,4 @@ async def capture_frame(class_label: int = None):
 if __name__ == "__main__":
     import uvicorn
     logging_info.info("FastAPI server starting...")
-    uvicorn.run(app, host="0.0.0.0", port=5000)
+    uvicorn.run(app, host="0.0.0.0", port=5000)''
