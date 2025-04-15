@@ -2,10 +2,14 @@ from camera.sampling import Sampling_normal
 import socket
 import io
 from PIL import Image
+import os
+from dotenv import load_dotenv
 
-# 서버 설정 (Mac Mini의 IP와 포트) todo 환경변수 등으로 별도 관리
-SERVER_IP = '192.168.1.100'  # Mac Mini의 IP 주소로 변경하세요
-SERVER_PORT = 12345
+load_dotenv() # 환경변수 로드
+
+# 서버 설정 (IP와 포트)
+SERVER_IP = os.getenv('server_ip')
+SERVER_PORT = os.getenv('server_port')
 
 def send_sampledImage():
     try:
@@ -31,13 +35,10 @@ def send_sampledImage():
             with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client_socket:
                 client_socket.connect((SERVER_IP, SERVER_PORT)) # 라즈베리는 학습용 컴퓨터에 접속하는 client 로 간주할 수 있다
 
-                # 이미지 데이터 크기 전송
                 image_data = stream.getvalue()
                 size = len(image_data)
-                client_socket.send(str(size).encode().ljust(16))
-
-                # 이미지 데이터 전송
-                client_socket.sendall(image_data)
+                client_socket.send(str(size).encode().ljust(16)) # 이미지 데이터 크기 전송
+                client_socket.sendall(image_data) # 이미지 데이터 전송
 
                 print(f"Image sent: {size} bytes")
 
