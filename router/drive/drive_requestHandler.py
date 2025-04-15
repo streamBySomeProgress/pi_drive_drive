@@ -11,7 +11,7 @@ drive_handler = APIRouter(prefix="/drive")
 
 
 @drive_handler.get("/start")
-async def drive_RequestHandler_start():
+async def drive_start():
     """주행 시작 요청 핸들러(앤드포인트)"""
     try:
         startDrive()
@@ -21,7 +21,7 @@ async def drive_RequestHandler_start():
         raise HTTPException(status_code=400, detail=exception)
 
 @drive_handler.get("/stop")
-async def drive_RequestHandler_stop():
+async def drive_stop():
     """주행 종료 요청 핸들러(앤드포인트)"""
     try:
         stopDrive()
