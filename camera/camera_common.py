@@ -6,7 +6,7 @@ from log.logger import setup_logger
 import time
 
 # 로깅 설정
-logging_info = setup_logger('sampling_eval', 'log_camera_common.txt', logging.INFO)
+logging_info = setup_logger('camera_common', 'log_camera_common.txt', logging.INFO)
 
 # PyTorch 변환 설정
 transform = transforms.ToTensor()
