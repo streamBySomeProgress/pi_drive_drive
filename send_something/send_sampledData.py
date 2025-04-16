@@ -24,6 +24,10 @@ def send_sampledImage(class_label: int):
         # NumPy 배열을 PIL 이미지로 변환
         image = Image.fromarray(frame_array)
 
+        # 이미지 형식이 RGB임을 보장
+        if not image.mode == 'RGB':
+            image = image.convert('RGB')
+
         # JPEG로 저장
         image.save(stream, format='JPEG')
         stream.seek(0) # 파일을 읽기 위하여 기준점을 맨 앞으로 이동
