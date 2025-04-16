@@ -5,7 +5,7 @@ from log.logger import setup_logger
 from global_path.global_path import model_path
 from torchArea.eval.eval_to_drive import eval_to_drive
 import threading
-from camera.sampling import Sampling_normal
+from camera.camera_common import Camera_common
 
 # 로깅 설정
 logging_info = setup_logger('eval_to_drive', 'log_eval_to_drive.txt', logging.INFO)
@@ -18,24 +18,18 @@ thread = None
 # PyTorch 변환 설정
 transform = transforms.ToTensor()
 
-# 평가를 위해 필요한 이미지 샘플링 영역
-sampling = Sampling_normal()
 
 # 실질적 주행 동작을 수행하는 영역
 def drive_execute_operator():
-    logging_info.info("driving is just started")
-    sampling.camera_on() # 카메라 활성화
-    while operating:
+    with Camera_common() as camera:
+        logging_info.info("driving is just started")
         # while 이하부터 주행 동작 영역
-
-        # 사진 데이터 할당
-        frame, frame_rgb, frame_tensor = sampling.do()
-        eval_to_drive(frame_tensor) # 모델을 기반으로 선의 방향을 반환하는 함수 todo 추후 실 주행 영역에 사용하기 위한 반환값 혹은 인자 생성 고려
-        time.sleep(1)  # 처리 속도 조절 (1초마다 한번)
-
-    # 반복문 종료 -> 주행 동작 중지됨(operating = False)
-    sampling.camera_off() # 카메라 리소스 회수
-    logging_info.info("driving is stopped")
+        while operating:
+            # 사진 데이터 할당
+            frame_tensor = camera.capture_as_tensor()
+            eval_to_drive(frame_tensor) # 모델을 기반으로 선의 방향을 반환하는 함수 todo 추후 실 주행 영역에 사용하기 위한 반환값 혹은 인자 생성 고려
+            time.sleep(1)  # 처리 속도 조절 (1초마다 한번)
+        logging_info.info("driving is stopped")
 
 # 주행 시작 요청
 def startDrive():

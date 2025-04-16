@@ -1,4 +1,4 @@
-from camera.sampling import Sampling_normal
+from camera.camera_common import Camera_common
 import requests
 import io
 from PIL import Image
@@ -14,14 +14,12 @@ SERVER_PORT = os.getenv('server_port')
 # 라벨링을 위한 값을 인자로 받아야
 def send_sampledImage(class_label: int):
     # 카메라 초기화
-    with Sampling_normal() as camera:
-        camera.camera_on() # 활성화(내부적인 sleep 함수 호출로 인하여 약 2초 지연됨)
-
+    with Camera_common() as camera:
         # 이미지 캡처를 위한 스트림
         stream = io.BytesIO()
 
         # 이미지 캡처
-        frame_array = camera.do()
+        frame_array = camera.capture_array()
 
         # NumPy 배열을 PIL 이미지로 변환
         image = Image.fromarray(frame_array)
@@ -36,6 +34,3 @@ def send_sampledImage(class_label: int):
             print(f"Image sent successfully: {response.json()}")
         else:
             raise requests.RequestException(f"Error: {response.status_code}, {response.text}") # 전송 실패 관련 예외
-
-        # 카메라 종료, 리소스 해제
-        camera.camera_off()
