@@ -33,7 +33,7 @@ def send_sampledImage(class_label: int):
         stream.seek(0) # 파일을 읽기 위하여 기준점을 맨 앞으로 이동
 
         # HTTP POST 요청(이미지 및 해당하는 라벨링 값 전송)
-        response = requests.post(f"http://{SERVER_IP}:{SERVER_PORT}/upload", files={'image': ('image.jpg', stream, 'image/jpeg'), 'class_label': class_label})
+        response = requests.post(f"http://{SERVER_IP}:{SERVER_PORT}/upload/image", files={'image': ('image.jpg', stream, 'image/jpeg'), 'class_label': class_label})
         if response.status_code == 200:
             print(f"Image sent successfully: {response.json()}")
         else:
