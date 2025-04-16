@@ -5,7 +5,7 @@ import logging
 from log.logger import setup_logger
 
 # 로깅 설정
-logging_info = setup_logger('main', 'log_drive_requestHandler.txt', logging.INFO)
+logging_info = setup_logger('drive_requestHandler', 'log_drive_requestHandler.txt', logging.INFO)
 
 drive_handler = APIRouter(prefix="/drive")
 
@@ -16,7 +16,7 @@ async def drive_start():
     try:
         startDrive()
         logging_info.info("Driving is started via HTTP")
-        return {"message": "Driving is started"}
+        return {"message": "Driving is started"} # todo response 영역 손보기
     except Exception as exception:
         raise HTTPException(status_code=400, detail=exception)
 
@@ -26,6 +26,6 @@ async def drive_stop():
     try:
         stopDrive()
         logging_info.info("Driving is stopped via HTTP")
-        return {"message": "Driving is stopped"}
+        return {"message": "Driving is stopped"} # todo response 영역 손보기
     except Exception as exception:
         raise HTTPException(status_code=400, detail=exception)

@@ -8,7 +8,7 @@ import threading
 from camera.camera_common import Camera_common
 
 # 로깅 설정
-logging_info = setup_logger('eval_to_drive', 'log_eval_to_drive.txt', logging.INFO)
+logging_info = setup_logger('drive_operate', 'log_drive_operate.txt', logging.INFO)
 
 # 전역 변수
 operating = False
