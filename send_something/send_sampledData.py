@@ -7,9 +7,9 @@ from dotenv import load_dotenv
 
 load_dotenv() # 환경변수 로드
 
-# 서버 설정 (IP와 포트)
-SERVER_IP = os.getenv('server_ip')
-SERVER_PORT = os.getenv('server_port')
+# 변수 설정 (학습을 수행하는 서버의 IP와 포트)
+SERVER_IP = os.getenv('training_server_ip')
+SERVER_PORT = os.getenv('training_server_port')
 
 # 라벨링을 위한 값을 인자로 받아야
 def send_sampledImage(class_label: int):

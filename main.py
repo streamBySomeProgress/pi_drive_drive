@@ -4,8 +4,15 @@ from log.logger import setup_logger
 from router.drive.drive_requestHandler import drive_handler
 from router.camera.camera_requestHandler import camera_handler
 import uvicorn
+from dotenv import load_dotenv
+import os
 
 app = FastAPI()
+
+load_dotenv() # 환경변수 로드
+
+# 본 서버 설정 (포트)
+PORT = int(os.getenv('port'))
 
 # 로깅 설정
 logging_info = setup_logger('main', 'log_main.txt', logging.INFO)
@@ -14,5 +21,5 @@ app.include_router(drive_handler)
 app.include_router(camera_handler)
 
 if __name__ == "__main__":
-    logging_info.info("FastAPI server starting...")
-    uvicorn.run(app, host="0.0.0.0", port=5000)
+    logging_info.info("FastAPI server starting the pi_drive_drive...")
+    uvicorn.run(app, host="0.0.0.0", port=PORT)
