@@ -1,6 +1,7 @@
 from fastapi import HTTPException
 from drive.drive_operate import startDrive, stopDrive
 from fastapi import APIRouter
+from fastapi.responses import JSONResponse
 import logging
 from log.logger import setup_logger
 
@@ -16,9 +17,15 @@ async def drive_start():
     try:
         startDrive()
         logging_info.info("Driving is started via HTTP")
-        return {"message": "Driving is started"} # todo response 영역 손보기
+        return JSONResponse(
+            status_code=200,
+            content={"message": "Driving is started"}
+        )
     except Exception as exception:
-        raise HTTPException(status_code=400, detail=exception)
+        return JSONResponse(
+            status_code=400,
+            content=exception
+        )
 
 @drive_handler.get("/stop")
 async def drive_stop():
@@ -26,6 +33,12 @@ async def drive_stop():
     try:
         stopDrive()
         logging_info.info("Driving is stopped via HTTP")
-        return {"message": "Driving is stopped"} # todo response 영역 손보기
+        return JSONResponse(
+            status_code=200,
+            content={"message": "Driving is stopped"}
+        )
     except Exception as exception:
-        raise HTTPException(status_code=400, detail=exception)
+        return JSONResponse(
+            status_code=400,
+            content=exception
+        )
