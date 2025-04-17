@@ -11,7 +11,7 @@ logging_info = setup_logger('drive_requestHandler', 'log_drive_requestHandler.tx
 drive_handler = APIRouter(prefix="/drive")
 
 
-@drive_handler.get("/start")
+@drive_handler.post("/start")
 async def drive_start():
     """주행 시작 요청 핸들러(앤드포인트)"""
     try:
@@ -27,7 +27,7 @@ async def drive_start():
             content=exception
         )
 
-@drive_handler.get("/stop")
+@drive_handler.post("/stop")
 async def drive_stop():
     """주행 종료 요청 핸들러(앤드포인트)"""
     try:

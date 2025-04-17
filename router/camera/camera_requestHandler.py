@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter
 from fastapi.responses import JSONResponse
 from send_something.send_sampledData import send_sampledImage
 import logging
@@ -9,7 +9,7 @@ logging_info = setup_logger('camera_requestHandler', 'log_camera_requestHandler.
 
 camera_handler = APIRouter(prefix="/camera")
 
-@camera_handler.get("/capture")
+@camera_handler.post("/capture")
 async def camera_capture(class_label: int):
     """라즈베리 파이의 카메라를 이용하여 사진 한장을 촬영한 후 학습 영역으로 전송"""
     try:
