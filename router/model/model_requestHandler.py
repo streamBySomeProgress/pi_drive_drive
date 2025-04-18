@@ -13,7 +13,7 @@ logging_info = setup_logger('model_requestHandler', 'log_model_requestHandler.tx
 
 model_handler = APIRouter(prefix="/model")
 
-@model_handler.patch("/replace")
+@model_handler.post("/replace")
 async def camera_capture(file: UploadFile = File(...)):
     """
         학습 영역에서 생성한 새 모델을 받아 기존 모델을 대체
