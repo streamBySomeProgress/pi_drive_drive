@@ -20,7 +20,7 @@ logging_info = setup_logger('main', 'log_main.txt', logging.INFO)
 
 app.include_router(drive_handler)
 app.include_router(camera_handler)
-#app.include_router(model_handler)
+app.include_router(model_handler)
 
 if __name__ == "__main__":
     logging_info.info("FastAPI server starting the pi_drive_drive...")
