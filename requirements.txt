@@ -87,6 +87,7 @@ pysmbc==1.0.23
 python-apt==2.6.0
 python-dotenv==1.1.0
 python-multipart==0.0.20
+<<<<<<< HEAD
 python-prctl==1.8.1
 pytz==2022.7.1
 pyudev==0.24.0
@@ -106,6 +107,9 @@ simplejpeg==1.8.2
 simplejson==3.18.3
 six==1.16.0
 smbus2==0.4.2
+=======
+setuptools==78.1.0
+>>>>>>> 44bfbcfdb921cf338b4669ea15477c9d4f3fd97f
 sniffio==1.3.1
 soupsieve==2.3.2
 spidev==3.5
