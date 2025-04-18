@@ -11,8 +11,6 @@ logging_info = setup_logger('camera_common', 'log_camera_common.txt', logging.IN
 # PyTorch 변환 설정
 transform = transforms.ToTensor()
 
-# 전역 변수
-camera_isRunning = False
 
 # 본 클래스는 context manager 형식으로 구현됨(이를 통하여 카메라 자원이 누수되는 일이 없도록 함)
 class Camera_common(Picamera2):

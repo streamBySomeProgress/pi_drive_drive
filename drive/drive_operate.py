@@ -15,8 +15,6 @@ operating = False
 global_model_path = model_path
 thread = None
 
-# PyTorch 변환 설정
-transform = transforms.ToTensor()
 
 
 # 실질적 주행 동작을 수행하는 영역

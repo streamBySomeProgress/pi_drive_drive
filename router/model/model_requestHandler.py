@@ -44,6 +44,7 @@ async def camera_capture(file: UploadFile = File(...)):
             # 새로운 .pth 파일로 저장
             with open(model_path, "wb") as f:
                 torch.save(state_dict, f)
+                logging_info('new model file is saved')
 
         return JSONResponse(
             status_code=200,
