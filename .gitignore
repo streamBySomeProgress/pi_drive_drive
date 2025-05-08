@@ -19,7 +19,5 @@ __pycache__/
 # mac os에서 폴더의 메타데이터를 저장할 때 사용되는 파일, ignore
 .DS_Store
 
-# 환경변수
-.env
 
 
